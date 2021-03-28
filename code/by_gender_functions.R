@@ -17,38 +17,6 @@ MyMerge <- function(x, y){
   return(df)
 }
 
-# code for TIMELINES of entrances (MyMerge inside):
-
-give_timeline_enters <- function(column, top = 5, years = 2016:2020, ylim = NULL) {
-  
-            ls <- list()
-            for(y in years){
-                  # first each year
-                  dat_year <- dat[dat$year == y, ]
-                  # only with the entrances, and select the column that want to be evaluated:
-                  dat_y_ent <- dat_year[dat_year$ingreso == 1, column]
-                  ls[[which(years == y)]] <- as.matrix(table(dat_y_ent))
-                }
-            
-            tab <- data.frame(Reduce(MyMerge, ls))
-            names(tab) <- years
-            
-            # now, select only top, OF THE ENTERS:
-            dat_tot_ent <- dat[dat$ingreso == 1, ]
-            total_tab <- table(dat_tot_ent[, column])
-            idx <- order(-total_tab)[1:top]
-            top_names_idx <- names( total_tab[idx] )
-            new_tab <- tab[top_names_idx, ]
-            # now we have a matrix were rows are variables and cols the years
-            # plot
-            par(mar=c(5.1, 4.1, 4.1, 2.1))
-            matplot(t(new_tab), type = "l", lty = "solid", xaxt = "n", ylim = ylim)
-            axis(1, at=seq_along(years), labels=colnames(new_tab))
-            legend("bottomright", inset=c(0,1), xpd=T, horiz=T,
-                   legend = rownames(new_tab), col = seq_len(nrow(new_tab)), pch = 16)
-            }
-
-#########
 
 timeline_by_spec_enters <- function(column, specialty, top = 5, years = 2016:2020, ylim = NULL) {
   

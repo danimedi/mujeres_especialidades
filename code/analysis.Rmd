@@ -5,6 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(here)
 ```
 
 ## Tendencias por género de los ingresantes a especialidades médicas en el Perú
@@ -12,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Daniel Medina-Neira, Napoleon Medina-Neira
 
 ```{r}
-dat <- read.csv(here::here("data/data_base.csv"))
+dat <- read.csv(here("data/data_base.csv"))
 # gender 0 and 1 (1 = F, 0 = M) to M and F
 dat$gender <- ifelse(dat$gender, "female", "male")
 ```
