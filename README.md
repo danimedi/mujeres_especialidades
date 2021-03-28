@@ -4,6 +4,12 @@ Este repositorio contiene información utilizada para el artículo "Tendencias p
 
 Más información específica de los datos se encuentra en la carpeta/directorio `data` y en el artículo.
 
+## Organización
+
+Este repositorio tiene una organización simple contando con 2 carpetas/directorios principales:
+
+- `data`: contiene la base de datos y el diccionario usado para la asignación de género, además contiene la documentación de estos datos mencionados.
+- `code`: scripts con funciones y el proceso del análisis para obtener figuras a partir de los datos.
 
 ## Note for researchers or developers
 
