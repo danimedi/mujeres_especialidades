@@ -7,4 +7,4 @@ Más información específica de los datos se encuentra en la carpeta/directorio
 
 ## Note for researchers or developers
 
-This repo does not contain the raw data from CONAREME or the code used to precess this data, mostly for privacy reasons and to avoid changes in the URL used in the article in the development process of the project. The "active"/"parent" repo is located in https://github.com/danimedi/residentado_peru.
+This repo does not contain the raw data from CONAREME or the code used to process this data, mostly for privacy reasons and to avoid changes in the URL used in the article during the development process of the project. The "active"/"parent" repo is located in https://github.com/danimedi/residentado_peru.
